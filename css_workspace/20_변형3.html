@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>20. 변형 3</title>
+	<style>
+		.wrap1{
+		display:inline-block;
+	}
+
+	.flower {
+		width:300px;
+		height:200px;
+		border:1px solid black;
+	}
+
+	.left-top:hover {
+		transform-origin:left top;
+		transform:rotateZ(25deg);
+	}
+
+	.right-top:hover {
+		transform-origin:right top;
+		transform:rotateZ(25deg);
+	}
+
+	.left-bottom:hover {
+		transform-origin:left bottom;
+		transform:rotateZ(25deg);
+	}
+
+	.right-bottom:hover {
+		transform-origin:right bottom;
+		transform:rotateZ(25deg);
+	}
+
+	.wrap2 {
+		width:200px;
+		height:200px;
+		border:1px black solid;
+		display:inline-block;
+	}
+
+	.box1 {
+		transform:perspective(500px) rotateY(45deg);
+		width:200px;
+		height:200px;
+		background:red;
+	}
+
+	.box2 {
+		transform:rotateX(45deg);
+		width:200px;
+		height:200px;
+		background:orange;
+	}
+
+	.style1 {
+		/* 하위 요소를 평면으로 처리  */
+		transform-style:flat;
+	}
+
+	.style2 {
+		/* 하위 요소들에 3D효과 적용 */
+		transform-style:preserve-3d;
+	} 
+
+	.bfv {
+		display: inline-block;
+		width: 200px;
+		height: 150px;
+		background-color: orange;
+		}
+        
+	.bfv1 {
+		backface-visibility: visible;
+	}
+	.bfv2 {
+		backface-visibility: hidden;
+	}
+	input:checked ~ .bfv {
+		transform: rotateY( 180deg )
+	}
+  </style>
+</head>
+<body>
+	<h1>기타 변형 속성</h1>
+	<h3>변형 기준점 설정하기</h3>
+	<p>transform-origin 속성으로 변형의 기준점을 설정할 수 있다.</p>
+	<div>
+		<div class="wrap1">
+			<img src="sample/image/flower1.png" class="flower left-top">
+		</div>
+		<div class="wrap1">
+			<img src="sample/image/flower1.png" class="flower right-top">
+		</div>
+		<div class="wrap1">
+			<img src="sample/image/flower1.png" class="flower left-bottom">
+		</div>
+		<div class="wrap1">
+			<img src="sample/image/flower1.png" class="flower right-bottom">
+		</div>
+	</div>
+
+	<hr>
+
+	<h3>3d변형 적용하기</h3>
+	<p>transform-style : 여러 가지 변형을 동시에 하는 경우 
+		부모 요소에서 적용한 3D변형을 하위 요소에 적용하는 속성</p>
+	<div class="wrap2">
+		<div class="box1 style1">
+			<div class="box2"></div>
+		</div>
+	</div>
+	<div class="wrap2">
+		<div class="box1 style2">
+			<div class="box2"></div>
+		</div>
+	</div>
+
+	<hr>
+
+	<h3>뒷면 안 보이게 하기</h3>	
+	<input type="checkbox">
+	<div class="bfv bfv1">backface-visibility: visible;</div>
+	<div class="bfv bfv2">backface-visibility: hidden;</div>
+</body>
+</html>

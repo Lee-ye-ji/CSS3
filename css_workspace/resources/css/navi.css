@@ -1,0 +1,65 @@
+        /* 블릿 및 여백 제거 */
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 메인 메뉴 수평 정렬 */
+        .navi > li{
+            float: left;
+        }
+
+        /* 메인 메뉴 크기 정렬 */
+        .navi > li > a{
+            padding: 10px 50px;
+        }
+
+        /* 모든 메뉴 스타일 적용 + 트랜지션*/
+        li a{
+            background-color: #3399ff;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+
+            display: block;
+            text-align: center;
+
+            padding: 10px;
+
+            /* 마우스 오버 시 색상 변경에 대한 트랜지션 */
+            transition: all 0.5s;
+        }
+
+        /* 모든 메뉴 마우스 오버 시 배경색 글자색 변경 */
+        li a:hover{
+            background-color: #33f;
+            color: white;
+        }
+
+        /* 평상시에는 서브 메뉴가 안 보이게 하기 */
+        .navi li ul{
+            /* 투명도 */
+            opacity: 0;
+            visibility: hidden;
+
+            /* 서브 메뉴 보일 때 트랜지션 */
+            transition: all 1s;
+        }
+
+        /* 마우스 커서를 올리면 서브 메뉴 보이게 하기 */
+        .navi li:hover ul{
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 서브 메뉴 평소에는 높이 값 없이 처리 */
+        .navi li ul li{
+            height: 0;
+            /* 서브 메뉴 높이 값 변경에 대한 트랜지션 */
+            transition: all 1s;
+        }
+        /* 메인 메뉴 마우스 오버 시 높이 값 부여 */
+        .navi li:hover ul li{
+            height: 40px;
+        }

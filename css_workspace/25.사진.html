@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25. 사진 갤러리 실습</title>
+    <style>
+        .title {
+            text-align: center;
+        }
+        .frame {
+            
+            border: 10px solid black;
+            width: 510px;
+            height: 300px;
+
+            background-color: #1c1c1c;
+            box-shadow: 10px 10px 30px 1px black;
+
+            padding : 10px 5px;
+
+            position: relative;
+            top: 100px;
+
+            left: 50%;
+            margin-left: -255px;
+        }
+
+        ul {
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+        .photo {
+            width: 150px;
+            height: 100px;
+            float: left;
+
+            margin : 10px;
+        }
+
+        .photo2 {
+            width: 400px;
+
+            border : 1px solid black;
+            position: absolute;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all 1s;
+        }
+
+        .small li:hover .photo2 {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .img1 {
+            top: 30px;
+            left: 100px;
+        }
+
+        .img2 {
+            top: 30px;
+            left: 250px;
+        }
+
+        .img3 {
+            top: 30px;
+            left: 400px;
+        }
+
+        .img4 {
+            top: 150px;
+            left: 100px;
+        }
+
+        .img5 {
+            top: 150px;
+            left: 250px;
+        }
+
+        .img6 {
+            top: 150px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">사진 갤러리 실습</h1>
+    <hr>
+    <div class="frame">
+        <ul class="small">
+            <li><img src="sample/image/flower1.PNG" class="photo">
+                <ul>
+                    <li><img src="sample/image/flower1.PNG" class="photo2 img1"></li>
+                </ul>
+            </li>
+            <li><img src="sample/image/flower2.png" class="photo">
+                <ul>
+                    <li><img src="sample/image/flower2.png" class="photo2 img2"></li>
+                </ul>
+            </li>
+            <li><img src="sample/image/flower3.PNG" class="photo">
+                <ul>
+                    <li><img src="sample/image/flower3.PNG" class="photo2 img3"></li>
+                </ul>
+            </li>
+            <li><img src="sample/image/flower4.PNG" class="photo">
+                <ul>
+                    <li><img src="sample/image/flower4.PNG" class="photo2 img4"></li>
+                </ul>
+            </li>
+            <li><img src="sample/image/flower5.PNG" class="photo">
+                <ul>
+                    <li><img src="sample/image/flower5.PNG" class="photo2 img5"></li>
+                </ul>
+            </li>
+            <li><img src="sample/image/forest1.PNG" class="photo">
+                <ul>
+                    <li><img src="sample/image/forest1.PNG" class="photo2 img6"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

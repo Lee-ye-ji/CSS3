@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. 전체 통합</title>
+    <style>
+        header, nav, section, article, aside, footer{
+            border: 1px solid red;
+            box-sizing: border-box;
+
+            display: block;
+        }
+
+        body{
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+        }
+
+        header{
+            width: 100%;
+            height: 20%;
+        }
+
+        header > section{
+            float: left;
+        }
+
+
+        #header-1{
+            width: 20%;
+            height: 100%;
+
+            position: relative;
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #header-2{
+            width: 65%;
+            height: 100%;
+
+            position: relative;
+        }
+
+        #search-form{
+            width: 80%;
+            height: 30%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #search-text-area{
+            height: 100%;
+            width: 80%;
+            float: left;
+        }
+
+        #search-btn-area{
+            /* border: 1px solid red; */
+            height: 100%;
+            width: 20%;
+            float: left;
+        }
+
+        #search-input, #search-btn{
+            border: 2px solid red;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #heder-3{
+            width: 15%;
+            height: 100%;
+        }
+
+        nav{
+            width: 100%;
+            height: 5%;
+        }
+
+        /* 전체 ul의 블릿 제거 및 공백 제거 */
+        #navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 메인 메뉴 수평 정렬 및 배치 */
+        #navi > li{
+            float: left;
+            width: 15%;
+        }
+
+        /* 각 메뉴 스타일 지정 */
+        #navi li a{
+            /* a태그 영역 클릭 가능하게 만들기 */
+            display: block;
+            /* 밑줄 제거 */
+            text-decoration: none;
+
+            /* 폰트 설정 */
+            text-align: center;
+            color: deepskyblue;
+            font-family: "굴림";
+            font-weight: 900;
+            font-size: 18px;
+
+            /* 높이 설정 */
+            line-height: 40px;
+        }
+
+        /* 메뉴 마우스 오버 시 색상 변경 */
+        #navi li a:hover{
+            color: orange;
+        }
+
+        #content{
+            width: 100%;
+            height: 55%;
+        }
+
+        #content > aside{
+            width: 15%;
+            height: 100%;
+            float: left;
+        }
+
+        #content-1{
+            width: 65%;
+            height: 100%;
+            float: left;
+        }
+
+        #content-2{
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+
+        #content-2 > header{
+            width: 100%;
+            height: 30%;
+        }
+
+        #content-2 > article{
+            width: 100%;
+            height: 70%;
+        }
+
+        #login_form_input{
+            width: 100%;
+            height: 80%;
+        }
+
+        #login_form_join{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+        }
+
+        #login_input_id_pwd{
+            width: 65%;
+            height: 100%;
+            float: left;
+        }
+
+        #login_input_btn{
+            width: 35%;
+            height: 100%;
+            float: left;
+        }
+
+
+        #login_input_id{
+            width: 100%;
+            height: 50%;
+        }
+
+        #login_input_pwd{
+            width: 100%;
+            height: 50%;
+        }
+
+        #input_id, #input_pwd, #login_btn{
+
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+            font-size: 11px;
+            font-weight: bold;
+            /* div에만 box-sizing : border-box 속성을 주었기 때문에 */
+            box-sizing: border-box;
+        }
+
+        footer{
+            width: 100%;
+            height: 20%;
+        }
+
+        #footer1{
+            width: 100%;
+            height: 20%;
+
+            border: 1px solid red;
+        }
+
+        #footer2{
+            width: 100%;
+            height: 80%;
+
+            border: 1px solid red;
+        }
+
+        #footer1> a{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            margin: 0 10px;
+            line-height: 25px;
+        }
+
+        #footer1 > a:hover{
+            color: deepskyblue;
+        }
+
+        #footer2 > p{
+            margin: 0;
+            font-size: 12px;
+        }
+
+        #footer2 > p:first-child{
+            height: 80%;
+        }
+
+        #footer2 > p:last-child{
+            height: 20%;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <section id="header-1">
+            <div id="imgDiv">
+                <img src="웹문서구조만들기_이미지/logo.jpg" alt="kh정보교육원">
+            </div>
+        </section>
+        <section id="header-2">
+            <form id="search-form">
+                <div id="search-text-area">
+                    <input type="text" id="search-input" name="search-input">
+                </div>
+                <div id="search-btn-area">
+                    <button type="submit" id="search-btn">검색</button>
+                </div>
+            </form>
+        </section>
+        <section id="header-3"></section>
+    </header>
+
+    <nav>
+        <ul id="navi">
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Oracle</a></li>
+            <li><a href="#">Front-End</a></li>
+            <li><a href="#">Server</a></li>
+            <li><a href="#">Framework</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <aside></aside>
+        <section id="content-1"></section>
+        <section id="content-2">
+            <!-- 1. 전체 로그인 폼을 감싸는 header -->
+            <header>
+                <!-- 2_1 입력을 받는 input 태그가 위치할 영역(form) -->
+                <form method="POST" id="login_form_input" action="">
+                    <!-- 3_1. ID/PWD input 태그가 위치할 div -->
+                    <div id="login_input_id_pwd">
+                        <!-- 4_1. ID 입력 input 태그 -->
+                        <div id="login_input_id">
+                            <input type="text" id="input_id" name="input_id"
+                            placeholder="ID를 입력하세요.">
+                        </div>
+                        <!-- 4_2. PWD 입력 input 태그 -->
+                        <div id="login_input_pwd">
+                            <input type="password" id="input_pwd" name="input_pwd"
+                            placeholder="비밀번호를 입력하세요.">
+                        </div>
+                    </div>
+
+                    <div id="login_input_btn">
+                        <input type="button" id="login_btn" value="로그인">
+                    </div>
+                </form>
+
+                <!-- 2_2 회원 가입 페이지 이동용 a태그가 위치할 div -->
+                <div id="login_form_join">
+                    <a href="#">회원가입</a>
+                    <a href="#">ID/PWD 찾기</a>
+                </div>
+            </header>
+            <article></article>
+        </section>
+    </section>
+
+    <footer>
+        <div id="footer1">
+            <a href="#">이용약관</a> |
+            <a href="#">개인정보취급방침</a> |
+            <a href="#">인재채용</a> |
+            <a href="#">고객센터</a>
+        </div>
+        <div id="footer2">
+            <p>
+                강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+                당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F 
+            </p>
+            <p>Copyright ⓒ 1998-2020 KH Information Educational Institute All Right Reserved</p>
+    </footer>
+</body>
+</html>

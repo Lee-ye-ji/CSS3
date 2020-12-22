@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 웹 문서 구조</title>
+    <style>
+        div{
+            /* div별 경계선 표현 */
+            border: 1px solid red;
+
+            /* div box-sizing 변경 */
+            box-sizing: border-box;
+        }
+
+        #wrapper{
+            width: 1000px;
+            height: 800px;
+
+            /* div를 화면 가운데로 오게 하기 */
+            margin: auto;
+        }
+
+        #header{
+            /* 너비는 wrapper와 동일 */
+            width: 100%;
+
+            /* 높이는 원하는 비율로 할당 */
+            height: 20%;
+
+            /* 어긋나는 부분을 없애기 위해 모든 div의 box-sizing 변경 */
+        }
+
+        #navigator{
+            width: 100%;
+            height: 5%;
+        }
+
+        #content{
+            width: 100%;
+            height: 55%;
+        }
+
+        #footer{
+            width: 100%;
+            height: 20%;
+        }
+        
+        #content-1{
+            /* 높이는 content와 같게, 폭은 원하는 비율로 조정 */
+            height: 100%;
+            width: 15%;
+
+            float: left;
+        }
+
+        #content-2{
+            height: 100%;
+            width: 65%;
+
+            /* 블록 속성을 가진 요소들의 정렬 방식을 지정 */
+            float: left;
+        }
+
+        #content-3{
+            height: 100%;
+            width: 20%;
+
+            /* 블록 속성을 가진 요소들의 정렬 방식을 지정 */
+            float: left;
+        }
+
+        .header{
+            float: left;
+        }
+
+        #header1{
+            height: 100%;
+            width: 20%;
+        }
+
+        #header2{
+            height: 100%;
+            width: 65%;
+        }
+
+        #header3{
+            height: 100%;
+            width: 15%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="header" id="header1"></div>
+            <div class="header" id="header2"></div>
+            <div class="header" id="header3"></div>
+        </div>
+        <div id="navigator"></div>
+        <div id="content">
+            <div id="content-1"></div>
+            <div id="content-2"></div>
+            <div id="content-3"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

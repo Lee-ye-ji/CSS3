@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 스타일 실습문제</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <style>
+        #font{
+            list-style: square;
+        }
+
+        #font > li:first-child{
+            font-family: 'Nerko One', cursive;
+        }
+
+        #font > li:nth-child(even){
+            font-size: 1.5em;
+        }
+
+        #f3{
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        #zero-number{
+            list-style-type: decimal-leading-zero;
+        }
+
+        #zero-number > li:nth-child(2n+1){
+            white-space: normal;
+            letter-spacing: 5px;
+        }
+
+        #zero-number > li:nth-of-type(2){
+            text-decoration: underline;
+        }
+
+        #zero-number > li:last-of-type{
+            /* font-variant: small-caps; */
+            text-transform: uppercase;
+        }
+
+        #white-circle{
+            list-style: circle;
+        }
+
+        #white-circle > li:nth-child(2){
+            text-align:right
+        }
+
+        #white-circle > li:nth-last-child(2){
+            text-align: center;
+        }
+
+        #white-circle li:last-of-type{
+            line-height: 3.0em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>텍스트 스타일 실습문제</h1>
+    <ul id="font">
+        <li>저를 선택해서 구글 웹 폰트 사이트에서 원하는 폰트를 가지고 와 바꿔보세요</li>
+        <li">저를 선택해서 부모 요소보다 1.5배 크게 만들어보세요</li>
+        <li id="f3">저를 선택해서 두꺼운 이텔릭체로 만들어보세요</li>
+        <li>저를 선택해서 부모 요소보다 1.5배 크게 만들어보세요</li>
+    </ul>
+
+    <hr>
+
+    <ol id="zero-number">
+        <li>저를 선택해서 글자와 글자 사이를 떨어지게 만들어 보세요</li>
+        <li>저를 선택해서 중간에 줄이 그어지도록 만들어 보세요</li>
+        <li>저를 선택해서 글자와 글자 사이를 떨어지게 만들어 보세요</li>
+        <li>저를 선택해서 i love you를 원래 소문자로 적었지만 대문자로 보이게 만들어 보세요</li>
+    </ol>
+
+    <hr>
+
+    <ul id="white-circle">
+        <li>이번에는 정렬입니다.</li>
+        <li>저를 선택해서 오른쪽 정렬로 만들어 보세요</li>
+        <li id="cir3">저를 선택해서 가운데 정렬로 만들어 보세요</li>
+        <li>저를 선택해서 위의 친구들과 3배만큼 떨어지게 만들어보세요</li>
+    </ul>
+
+</body>
+</html>

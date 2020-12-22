@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>21. 트랜지션</title>
+  <style>
+	.tran1 {
+		width:100px;
+		height:100px;
+		background:red;
+		border:1px solid black;
+		/* 트랜지션이 진행되는 시간을 지정하는 속성 */
+		transition-duration:2s;
+	}
+
+	.tran1:hover {
+		background:yellow;
+	}
+
+	.tran2 {
+		width:100px;
+		height:100px;
+		background:red;
+		border:1px solid black;
+		/* 트랜지션을 적용할 속성을 선택하며 여러 개를 선택할 경우 ,로 구분 */
+		transition-property:background-color, transform, width, height;
+		/* 트랜지션이 진행되는 시간을 지정하는 속성 
+		여러 개를 설정할 경우 ,로 구분하고 property값과 1:1로 대응 됨 */
+		transition-duration:2s, 3s, 1s, 10s; 
+	}
+
+	.tran2:hover {
+		width:200px;
+		height:200px;
+		transform:rotateZ(180deg);
+		background:yellow;
+	}
+
+	.tran {
+		width:100px;
+		height:100px;
+		background:red;
+		border:1px solid black;
+		transition-duration:10s;
+		/* cublic-bezier(n,n,n,n)
+		   https://cubic-bezier.com/ : 원하는 곡선 만들어서 전달 */
+	}
+
+	input:checked ~ .tran {
+		background:yellow;
+		width: 100%;
+	}
+
+	/* 트랜지션이 진행되는 구간 별로 시간을 지정하는 속성 */
+	.tran3 {
+		transition-timing-function:linear;
+	}
+
+	.tran4 {
+		transition-timing-function:ease;
+	}
+
+	.tran5 {
+		transition-timing-function:ease-in;
+	}
+
+	.tran6 {
+		transition-timing-function:ease-out;
+	}
+
+	.tran7 {
+		transition-timing-function:ease-in-out;
+	}
+
+	.tran8 {
+		width:100px;
+		height:100px;
+		background:red;
+		border:1px solid black;
+		/* transition : 트랜지션 속성 값을 한 번에 지정할 수 있는 속성
+		선택자{transition: property duration timing-function delay;} */
+		transition: all 5s ease-in 2s;
+	}
+	.tran8:hover {
+		transform:rotateZ(180deg);
+		background:yellow;
+	}
+  
+  </style>
+ </head>
+ <body>
+  <h1>트랜지션</h1>
+  <p>시간에 따라 웹 요소의 스타일 속성이 조금씩 바뀌는 것을 의미한다.</p>
+  <h3>트랜지션 진행 시간 지정하기</h3>
+  <div class="tran1"></div>
+  <hr>
+
+  <h3>트랜지션 진행별 시간 설정하기</h3>
+  <div class="tran2"></div>
+  <hr>
+
+  <h3>트랜지션 진행별 속도 지정하기</h3>
+  <p>transition-timing-function: linear | ease | ease-in | 
+	  ease-out | ease-in-out | cublic-bezier(n,n,n,n)</p>
+  <label>시작 : </label><input type="checkbox">
+  <p>linear</p>
+  <div class="tran tran3"></div>
+  <p>ease</p>
+  <div class="tran tran4"></div>
+  <p>ease-in</p>
+  <div class="tran tran5"></div>
+  <p>ease-out</p>
+  <div class="tran tran6"></div>
+  <p>ease-in-out</p>
+  <div class="tran tran7"></div>
+
+  <hr>
+
+  <h3>트랜지션 시간 지연하기</h3>
+  <div class="tran8"></div>
+  <hr>
+
+ </body>
+</html>

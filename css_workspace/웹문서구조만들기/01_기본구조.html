@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. 기본구조</title>
+    <style>
+        .test1{
+            width: 300px;
+            height: 200px;
+
+            border: 20px solid blue;
+
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .test2{
+            width: 300px;
+            height: 200px;
+            border: 20px solid yellow;
+            padding: 20px;
+
+            /* box-sizing : 지정되는 width, height 값이
+            적용 되는 범위 설정(기본 값 : content-box) */
+            box-sizing: border-box;
+            /* width, height 값이 content+padding+border 세 영역을 더한 값이
+            되도록 설정 */
+
+        }
+    </style>
+</head>
+<body>
+    <h2>영역 관련 속성</h2>
+    <div class="test1">
+        1) content : 내용 표시되는 영역<br>
+        2) border : 요소의 테두리 영역<br>
+        3) padding : content와 border 사이의 영역
+        4) margin : 타 요소와의 간격을 지정하는 영역
+    </div>
+
+    <div class="test1">
+        현재 div의 테두리를 포함한 가로 길이<br>
+        = width + 양쪽 padding + 양쪽 border
+        = 300 + (20 * 2) + (20 * 2) <br>
+        = 380 <br>
+        현재 div의 테두리를 포함한 세로 길이 <br>
+        = height + 위아래 padding + 위아래 border <br>
+        = 200 + (20 * 2) + (20 * 2) <br>
+        = 280px
+    </div>
+
+    <hr>
+
+    <h2>div 내부에 div 넣기</h2>
+    <div class="test1">
+        <div class="test2"></div>
+    </div>
+</body>
+</html>

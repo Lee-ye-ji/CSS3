@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>18. 변형 1</title>
+  <style>
+	img {
+		width:250px;
+		height:200px;
+	}
+	.trans1:hover {
+		/* 양수 음수로 X축(좌우) 조절 가능 */
+      	-ms-transform : translateX(50px);
+		-moz-transform : translateX(50px);
+		-webkit-transform : translateX(50px);
+		-o-transform : translateX(50px);
+        transform : translateX(50px); 
+	}
+	.trans2:hover {
+		/* 양수 음수로 Y축(상하) 조절 가능 */
+		-ms-transform : translateY(50px); 
+		-moz-transform : translateY(50px); 
+		-webkit-transform : translateY(50px); 
+		-o-transform : translateY(50px); 
+		transform : translateY(50px); 
+	}
+	.trans3:hover {
+		/* X축, Y축 인자 2개 전달하여 대각선으로 움직임 */
+		-ms-transform : translate(50px, 50px); 
+		-moz-transform : translate(50px, 50px); 
+		-webkit-transform : translate(50px, 50px); 
+		-ms-transform : translate(50px, 50px);
+		-o-transform : translate(50px, 50px); 
+		transform : translate(50px, 50px);
+	}
+	.trans4:hover {
+		-ms-transform : scaleX(2); 
+		-moz-transform : scaleX(2); 
+		-webkit-transform : scaleX(2); 
+		-ms-transform : scaleX(2); 
+		-o-transform : translate(50px, 50px); 
+		transform : scaleX(2);
+	}
+	.trans5:hover {
+		-ms-transform : scaleY(2);
+		-moz-transform : scaleY(2);
+		-webkit-transform : scaleY(2);
+		-o-transform : scaleY(2);
+		transform: scaleY(2);
+	}
+	.trans6:hover {
+		-ms-transform : scale(2, 2); 
+		-moz-transform : scale(2, 2); 
+		-webkit-transform : scale(2, 2); 
+		-o-transform : scale(2, 2); 
+		transform: scale(2, 2); 
+	}
+	.trans7:hover {
+		-ms-transform : rotate(45deg); 
+		-moz-transform : rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-o-transform : rotate(45deg);
+		transform : rotate(45deg); 
+	}
+	.trans8:hover {
+		-ms-transform : skewX(45deg); 
+		-moz-transform : skewX(45deg); 
+		-webkit-transform : skewX(45deg); 
+		-o-transform : skewX(45deg); 
+		transform : skewX(45deg); 
+	}
+	.trans9:hover {
+		-ms-transform : skewY(45deg); 
+		-moz-transform : skewY(45deg); 
+		-webkit-transform : skewY(45deg); 
+		-o-transform : skewY(45deg); 
+		transform: skewY(45deg); 
+	}
+	.trans10:hover {
+		-ms-transform: skew(10deg, 10deg); 
+		-moz-transform : skew(10deg, 10deg); 
+		-webkit-transform : skew(10deg, 10deg); 
+		-o-transform : skew(10deg, 10deg); 
+		transform: skew(10deg, 10deg);
+	}
+
+  </style>
+ </head>
+ <body>
+  <h1>2차원 변형</h1>
+  <h3>좌우로 움직이기</h3>
+  <img src="sample/image/flower1.png" class="trans1">
+  <hr>
+  <h3>위아래로 움직이기</h3>
+  <img src="sample/image/flower2.png" class="trans2">
+  <hr>
+  <h3>대각선으로 움직이기</h3>
+  <img src="sample/image/flower3.png" class="trans3">
+  <hr>
+  <h3>가로로 확대 축소</h3>
+  <img src="sample/image/flower4.png" class="trans4">
+  <hr>
+  <h3>세로로 확대 축소</h3>
+  <img src="sample/image/flower5.png" class="trans5">
+  <hr>
+  <h3>전체 확대 축소</h3>
+  <img src="sample/image/river1.png" class="trans6">
+  <hr>
+  <h3>지정한 각도만큼 회전</h3>
+  <img src="sample/image/river2.png" class="trans7">
+  <hr>
+  <h3>지정한 각도만큼 가로로 뒤틀기</h3>
+  <img src="sample/image/city1.png" class="trans8">
+  <hr>
+  <h3>지정한 각도만큼 세로로 뒤틀기</h3>
+  <img src="sample/image/tower1.png" class="trans9">
+  <hr>
+  <h3>지정한 각도만큼 전체 뒤틀기</h3>
+  <img src="sample/image/forest1.png" class="trans10">
+  <hr>
+ </body>
+</html>

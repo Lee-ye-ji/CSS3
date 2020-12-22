@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. navigator</title>
+    <style>
+        div{
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        #navi-wrapper{
+            width: 1000px;
+            height: 40px;
+        }
+
+        /* 전체 ul의 블릿 제거 및 공백 제거 */
+        #navi{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 메인 메뉴 수평 정렬 및 배치 */
+        #navi > li{
+            float: left;
+            width: 15%;
+        }
+
+        /* 각 메뉴 스타일 지정 */
+        #navi li a{
+            /* a 태그 영역 클릭 가능하게 만들기 */
+            display: block;
+            /* 밑줄 제거 */
+            text-decoration: none;
+
+            /* 폰트 설정 */
+            text-align: center;
+            color: deepskyblue;
+            font-family: "굴림";
+            font-weight: 900;
+            font-size: 18px;
+
+            /* 높이 설정 */
+            line-height: 40px;
+        }
+
+        /* 메뉴 마우스 오버 시 색상 변경 */
+        #navi li a:hover{
+            color: orange;
+        }
+
+        /* 서브 메뉴 설정 */
+        #navi li > ul{
+            /* 블릿 제거 및 공백 제거 */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            /* 평소에는 보이지 않게 */
+            opacity: 0;
+            visibility: hidden;
+
+            /* 트랜지션 */
+            transition: all 0.6s;
+        }
+
+        #navi li:hover ul{
+            /* 메인 메뉴에 마우스 오버 시 서브 메뉴 보이게 */
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div id="navi-wrapper">
+        <ul id="navi">
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Oracle</a></li>
+            <li><a href="#">Front-end</a>
+                <ul>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">JQuery</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Server</a>
+                <ul>
+                    <li><a href="#">Servlet</a></li>
+                    <li><a href="#">JSP</a></li>
+                    <li><a href="#">AJAX</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Oracle</a>
+                <ul>
+                    <li><a href="#">MyBatis</a></li>
+                    <li><a href="#">Spring</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
