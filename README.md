@@ -3,6 +3,7 @@
 ### 웹 페이지 구성
 → 문서 내용 작성과 꾸미는 부분을 분리하여 내용을 수정해도 디자인을 바꿀 필요가 없고 디자인을 수정해도 글 내용을 바꿀 필요가 없음  
 다양한 기기에도 디자인만 따로 적용하여 구동시킬 수 있음
+
 ![image](https://user-images.githubusercontent.com/59958929/103136858-5d43ce00-4707-11eb-9a2b-afc10f77b1ca.png)
 
 ### style과 stylesheet
