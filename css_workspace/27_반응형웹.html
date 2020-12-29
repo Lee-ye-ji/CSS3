@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- width = device-width : 페이지의 너비를 기기의 스크린 너비로 설정.
+    렌더링 영역을 기기의 뷰포트의 크기와 같게 만듦.
+    initial-scale = 1.0 : 처음 페이지 로딩 시 확대/축소가 되지 않음 원래 크기를 사용하도록 함.
+    0 ~ 10 사이의 값 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27. 반응형 웹</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(153, 211, 235);
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #2291b9;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background-color: #4ea0bb;
+        }
+
+        aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        } 
+
+        /* 화면을 세로로 12분할 */
+        .col-1{
+            width: 8.33%;
+        }
+        .col-2{
+            width: 16.66%;
+        }
+        .col-3{
+            width: 25%;
+        }
+        .col-4{
+            width: 33.33%;
+        }
+        .col-5{
+            width: 41.66%;
+        }
+        .col-6{
+            width: 50%;
+        }
+        .col-7{
+            width: 58.33%;
+        }
+        .col-8{
+            width: 66.66%;
+        }
+        .col-9{
+            width: 75%;
+        }
+        .col-10{
+            width: 83.33%;
+        }
+        .col-11{
+            width: 91.66%;
+        }
+        .col-12{
+            width: 100%;
+        }
+
+        [class*='col-']{
+            float: left;
+            padding: 15px;
+        }
+
+        /*미디어 쿼리*/
+        /*창이 600px 이하가 되면 변화*/
+        @media only screen and (max-width: 600px){
+            body{
+                background-color: lightpink;
+            }
+        }
+
+        /* 창이 768px 이하가 되면 col- 클래스는 모두 100%의 크기를 가짐 */
+        @media only screen and (max-width: 768px){
+            /* For mobile phones :  */
+            [class*="col-"]{
+                width: 100%;
+            }
+        }
+
+        /* 지금은 Desktop First
+        만약 Mobile First로 설정하려면?
+        default를 width : 100%로 하고 min-width : 768px일 때 desktop의 비율을 적용함 */
+
+        /* 크기가 600px 이하가 되면 aside 엘리먼트를 숨김 */
+        @media only screen and (max-width : 600px){
+            aside{
+                /* visibility: hidden; */
+                display: none;
+            }
+        }
+
+        /* 크기가 600px 이하일 때 header의 글씨 크기를 10px로, 600px 이상일 때 20px로 조정 */
+        @media only screen and (max-width: 600px){
+            header{
+                font-size: 10px;
+            }
+        }
+        @media only screen and (min-width: 600px){
+            header{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>반응형 웹(Responsive web)</h1>
+    <p>반응형 웹 디자인이란 하나의 웹 사이트에서 pc, 스마트폰, 태블릿 PC 등 접속하는 디스플레이의 종류에 따라
+        화면의 크기가 자동으로 변하도록 만든 웹 페이지 접근 기법</p>
+
+        <h3>Grid View / Media Query</h3>
+
+        <header>
+            <h1>KH정보교육원</h1>
+        </header>
+    
+        <section class="content">
+            <section class="col-3 menu">
+                <ul>
+                    <li>강남 1관</li>
+                    <li>강남 2관</li>
+                    <li>강남 3관</li>
+                </ul>
+            </section>
+    
+            <section class="col-6">
+                <h1>KH정보교육원</h1>
+                <p>디지털 콘텐츠 융합 응용SW엔지니어 양성과정 디지털 콘텐츠 융합 응용SW엔지니어 양성과정</p>
+                <p>디지털 콘텐츠 융합 응용SW엔지니어 양성과정 디지털 콘텐츠 융합 응용SW엔지니어 양성과정</p>
+            </section>
+    
+            <section class="col-3">
+                <aside class="aside">
+                    <h2>화면 설계</h2>
+                    <p>2020.12.15</p>
+                    <h2>UI 구현</h2>
+                    <p>2021.01.04</p>
+                    <h2>화면 설계</h2>
+                    <p>2020.12.15</p>
+                    <h2>UI 구현</h2>
+                    <p>2021.01.04</p>
+                </aside>
+            </section>
+        </section>
+
+</body>
+</html>
